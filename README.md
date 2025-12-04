@@ -141,7 +141,7 @@ We create a temporary EC2 instance to configure the application, test DB connect
 
 ---
 
-### **Step 1: Launch Dev1 EC2 (Temporary App Server)**
+1. **Launch Dev1 EC2 (Temporary App Server)**
 
 - Subnet: **App Subnet-A (Private Subnet)**  
 - Public IP: **Enabled** (only for initial SSH access)  
@@ -151,7 +151,7 @@ We create a temporary EC2 instance to configure the application, test DB connect
 
 ---
 
-### **Step 2: Install PHP, Nginx & Required Extensions**
+2. **Install PHP, Nginx & Required Extensions**
 
 SSH into the instance:
 
@@ -168,12 +168,14 @@ php -v
 
 sudo systemctl restart php-fpm
 sudo systemctl restart nginx
-Step 3: Add Temporary Test Files (For Verification Only)
-Navigate to web root:
+```
 
-bash
-Copy code
+3. **Add Temporary Test Files (For Verification Only)**
+
+Navigate to web root:
+```bash
 cd /usr/share/nginx/html
+```
 Create:
 
 index.html → for checking nginx
